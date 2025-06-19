@@ -15,7 +15,7 @@ Most projects in this repo are built with:
 - Jupyter Notebooks for exploration and documentation
 - Public/free APIs unless otherwise stated
 
-### 🧑‍💻 Development Environment
+The development environment includes:
 - VSCode
 - Linux/Ubuntu
 
