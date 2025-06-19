@@ -4,7 +4,8 @@ This is my multi-project workspace focused on financial data, quantitative resea
 ## 📁 Project Index
 Below are the current projects organized in this repository:
 
-### [`Financial-Data-API-Research-Week1/`](Financial-Data-API-Research-Week1/README.md)
+### `Financial-Data-API-Research-Week1/`
+*→ [Project README.md](Financial-Data-API-Research-Week1/README.md)*
 **Status:** In progress  
 **Purpose:** Evaluate and implement alternative APIs to Yahoo Finance for retrieving U.S. equity OHLC(+adj_close) and volume data. Includes rate-limit comparison, integration testing, and a unified Python data fetcher.
 
