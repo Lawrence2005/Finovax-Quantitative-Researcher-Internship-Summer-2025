@@ -7,12 +7,12 @@ The task will be two-fold:
 - Identify and evaluate free or freemium Python-accessible APIs that deliver end-of-day OHLC(+adj_close) and volume data for U.S. equities.
 - Consider factors such as data coverage (how far back and up-to-date), rate limits, ease of integration, documentation quality, and community support.
 - Produce a shortlist (3-6) of candidates. Be sure to explore at least:
-    A. Alpha Vantage
-    B. Tiingo
-    C. IEX Cloud / iexfinance
-    D. Twelve Data
-    E. Google Finance
-    F. Polygon.io
+    - A. Alpha Vantage
+    - B. Tiingo
+    - C. IEX Cloud / iexfinance
+    - D. Twelve Data
+    - E. Google Finance
+    - F. Polygon.io
 - For each above, summarize the pros and cons—especially around free-tier limits and data freshness.
 
 2. Extend to Minute-Level (Optional/Bonus)
