@@ -14,7 +14,7 @@ Yahoo Finance, as a popular Python API source ("yfinance") for getting financial
     - Polygon.io
 - For each above, summarize the pros and cons—especially around free-tier limits and data freshness.
 
-**2. Extend to Minute-Level (Optional/Bonus)**
+**2. (Optional/Bonus) Extend to Minute-Level**
 - As an encouraged stretch goal, investigate which of your shortlisted providers (if any) also offer free 1-minute historical data (at least for the past/latest 5 trading days). Also research whether these 1-minute data sources (if any) are delayed or not.
 - Note any additional setup or rate-limit considerations required to access intraday feeds.
 
