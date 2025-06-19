@@ -1,5 +1,5 @@
 # Finovax Quantitative Researcher Internship (Summer 2025)
-This is my multi-project workspace focused on financial data, quantitative research, and backend data tools. This repository consists of self-contained projects exploring APIs, data pipelines, algorithmic trading logic, and more.
+This is my multi-project workspace focused on financial data, quantitative research, and backend data tools. This repository includes self-contained projects exploring APIs, data pipelines, algorithmic trading logic, and more.
 
 ## 📁 Project Index
 **`Financial-Data-API-Research-Week1/`** *→ [Project README.md](Financial-Data-API-Research-Week1/README.md)*\
@@ -15,7 +15,7 @@ Most projects in this repo are built with:
 - Jupyter Notebooks for exploration and documentation
 - Public/free APIs unless otherwise stated
 
-The development environment includes:
+The development environment consists of:
 - VSCode
 - Linux/Ubuntu
 
