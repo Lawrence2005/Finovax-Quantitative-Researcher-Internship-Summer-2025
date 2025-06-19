@@ -1,11 +1,26 @@
 import pandas as pd
 
-# A. A commented summary of your platform shortlist with pros/cons.
-
-# A Python function that, given any U.S. ticker symbol (e.g. AAPL, TSLA), fetches the most recent daily OHLC(+adj_close) and volume data up to the latest trading date, along with a historical period of data required.
 def fetch_daily_data(ticker: str, num_days: int, source: str = 'tiingo') -> pd.DataFrame:
+    """
+    Given any U.S. ticker symbol (e.g. AAPL, TSLA), fetch daily OHLC + adj_close + volume data for num_days up to the latest trading date.
+
+    Parameters:
+        ticker (str): U.S. equity ticker symbol (e.g., "AAPL")
+        num_days (int): Length of historical data to fetch in days (e.g., 30 for the last 30 trading days)
+        source (str): API source to use (e.g., 'tiingo', 'alpha_vantage')
+
+    Returns:
+        pd.DataFrame: DataFrame with date-indexed OHLCV(+adj_close) data
+    """
     pass
 
-# C. (Optional) Notes or code snippets showing how you would fetch 1-minute data if available.
+# Entry point for quick testing
+if __name__ == "__main__":
+    df = fetch_daily_data("AAPL", "2023-01-01", "2023-12-31", source="tiingo")
+    print(df.head())
 
-# D. Any necessary visualizations/plottings for demonstration purpose.
+# (Optional) Notes or code snippets showing how you would fetch 1-minute data if available.
+# Check each provider for:
+# Access to 1-minute historical data (especially past 5 days).
+# Whether data is real-time or delayed.
+# Whether data requires paid plan or elevated permissions.
