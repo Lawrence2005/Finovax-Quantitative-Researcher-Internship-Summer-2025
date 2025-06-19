@@ -2,7 +2,6 @@
 Yahoo Finance, as a popular Python API source ("yfinance") for getting financial data, has recently gone through unstable breakdowns and updates these days, e.g. sometimes losing entire days of quotes or encountering rate-limit blocks. To safeguard our consistent and none-delayed data and analytical services, it’s critical to ***identify free, reliable, alternative data providers*** to replace Yahoo Finance when needed. While minute-level data remains a valuable goal, our current immediate priority is to ***secure daily historical price data*** (up through the latest trading date) from one or more alternative sources.
 
 # Project Requirements:
-The task will be two-fold:
 **1. Research Daily-History Data Platforms**
 - Identify and evaluate free or freemium Python-accessible APIs that deliver end-of-day OHLC(+adj_close) and volume data for U.S. equities.
 - Consider factors such as data coverage (how far back and up-to-date), rate limits, ease of integration, documentation quality, and community support.
