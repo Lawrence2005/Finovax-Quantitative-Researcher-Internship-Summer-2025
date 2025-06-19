@@ -14,6 +14,7 @@ Most projects in this repo are built with:
 - `pandas`, `requests`, `matplotlib`, etc.
 - Jupyter Notebooks for exploration and documentation
 - Public/free APIs unless otherwise stated\
+
 The development environment includes:
 - VSCode
 - Linux/Ubuntu
