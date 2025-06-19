@@ -20,7 +20,3 @@ if __name__ == "__main__":
     print(df.head())
 
 # (Optional) Notes or code snippets showing how you would fetch 1-minute data if available.
-# Check each provider for:
-# Access to 1-minute historical data (especially past 5 days).
-# Whether data is real-time or delayed.
-# Whether data requires paid plan or elevated permissions.
