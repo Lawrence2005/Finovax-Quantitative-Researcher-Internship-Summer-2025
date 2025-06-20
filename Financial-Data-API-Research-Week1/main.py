@@ -2,7 +2,7 @@ import pandas as pd
 
 def fetch_daily_data(ticker: str, num_days: int, source: str = 'tiingo') -> pd.DataFrame:
     """
-    Given any U.S. ticker symbol (e.g. AAPL, TSLA), fetch daily OHLCV + adj_close data for num_days up to the latest trading date.
+    Given any U.S. ticker symbol (e.g. AAPL, TSLA), fetch daily OHLCV + adj_close data for <ins>num_days</ins> days up to the latest trading date.
 
     Parameters:
         ticker (str): U.S. equity ticker symbol (e.g., "AAPL")
