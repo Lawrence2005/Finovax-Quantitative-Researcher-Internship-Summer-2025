@@ -1,5 +1,5 @@
 <p align="center">
-![](https://ci3.googleusercontent.com/mail-sig/AIorK4ySzDtmFct8MdwJUuKUzSZaija53nTmvP_TF1ohRJtfMlZJer8gU8B431NnjOT9b_IoI8UhA5o)
+    <img src=https://ci3.googleusercontent.com/mail-sig/AIorK4ySzDtmFct8MdwJUuKUzSZaija53nTmvP_TF1ohRJtfMlZJer8gU8B431NnjOT9b_IoI8UhA5o/>
 </p>
 # Finovax Quantitative Researcher Internship (Summer 2025)
 This is my multi-project workspace focused on financial data, quantitative research, and backend data tools. This repository includes self-contained projects exploring APIs, data pipelines, algorithmic trading logic, and more.
