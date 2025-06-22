@@ -25,11 +25,9 @@ def fetch_daily_data(ticker: str, start_date: str, end_date: str | None, source:
         'Content-Type': 'application/json',
         'Authorization' : f'Token {Tiingo_API_TOKEN}'
     }
-    request_url = f"https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate={start_date}&format=csv&resampleFreq=daily" if end_date is None else \
-                  f"https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate={start_date}&endDate={end_date}&format=csv&resampleFreq=daily"
+    request_url = f"https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate={start_date}&resampleFreq=daily" if end_date is None else \
+                  f"https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate={start_date}&endDate={end_date}&resampleFreq=daily"
     requestResponse = requests.get(request_url, headers=headers)
-
-    requestResponse.json()
 
     result = pd.DataFrame(requestResponse.json())
 
@@ -82,3 +80,11 @@ def fetch_intraday_data(ticker: str, start_date: str, end_date: str | None, sour
     result = result[['open', 'high', 'low', 'close', 'volume']]
 
     return result
+
+if __name__ == "__main__":
+    ticker = "AAPL"
+    start_date = "2023-01-01"
+    end_date = "2023-12-31"
+
+    daily_data = fetch_daily_data(ticker, start_date, end_date)
+    print(daily_data.head())
