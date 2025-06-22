@@ -60,35 +60,43 @@ def fetch_alpha_vantage_data(ticker: str, frequency: str, start_date: str, end_d
         frequency (str): Frequency of data ('daily' or 'intraday')
 
     Returns:
-        pd.DataFrame: DataFrame with date-/datetime-indexed OHLCV(+adj_close) data
+        pd.DataFrame: DataFrame with date-/datetime-indexed OHLCV data
     """
 
     if frequency not in ['daily', 'intraday']:
         raise ValueError("Frequency must be either 'daily' or 'intraday'.")
     
-    url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={ticker}&outputsize=full&apikey={Alpha_Vantage_API_TOKEN}' if frequency == 'daily' else \
+    url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={ticker}&outputsize=full&apikey={Alpha_Vantage_API_TOKEN}' if frequency == 'daily' else \
           (f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={ticker}&interval=1min&apikey={Alpha_Vantage_API_TOKEN}' if not end_date else \
            f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={ticker}&interval=1min&month={end_date[:7]}&outputsize=full&apikey={Alpha_Vantage_API_TOKEN}')
     response = requests.get(url)
 
-    print(response.json())  # Debugging line to check the response
-
-    # Extract time series data and set 'date' as the index
+    # Extract time series data
     section = "Time Series (Daily)" if frequency == 'daily' else "Time Series (1min)"
     result = pd.DataFrame(response.json()[section]).T
-    result.index = pd.to_datetime(result.index)
+    
+    # Filter by date range
+    if frequency == 'daily':
+        mask = (result.index >= start_date) & ((result.index <= end_date) if end_date else True)
+        result = result.loc[mask]
+
+    # Filter out OHLCV(+adj_close), rename, and cast columns to appropriate types
+    result = result[['1. open', '2. high', '3. low', '4. close', '5. volume']]
+    result.columns = ['open', 'high', 'low', 'close', 'volume']
+    result = result.astype({"open": float, "high": float, "low": float, "close": float, "volume": int})
+
+    # Parse the index as datetime
+    result.index = pd.to_datetime(result.index, utc = True)
+
+    # Convert to datetime.date objects (drop time info if any)
+    if frequency == 'daily':
+        result.index = result.index.date
+
+    # Name the index
+    result.index.name = 'date'
 
     # Ensure the DataFrame is sorted by date
     result = result.sort_index(ascending=False)
-
-    # Filter by date range
-    if frequency == 'daily':
-        result = result[result.index >= start_date and (result.index <= end_date if end_date else True)]
-
-    # Filter out OHLCV(+adj_close) and rename columns
-    cols = ['1. open', '2. high', '3. low', '4. close', '6. volume', '5. adjusted close'] if frequency == 'daily' else ['1. open', '2. high', '3. low', '4. close', '6. volume']
-    result = result[cols]
-    result.columns = ['open', 'high', 'low', 'close', 'volume', 'adjClose'] if frequency == 'daily' else ['open', 'high', 'low', 'close', 'volume']
 
     return result
 
@@ -164,5 +172,5 @@ if __name__ == "__main__":
     start_date = "2025-06-01"
     end_date = "2025-06-20"
 
-    data = fetch_daily_data(ticker, start_date, end_date, source='alpha_vantage')
+    data = fetch_intraday_data(ticker, start_date, end_date, source='alpha_vantage')
     print(data.head())
