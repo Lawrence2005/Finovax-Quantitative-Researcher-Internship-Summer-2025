@@ -3,6 +3,9 @@ import requests
 from dotenv import load_dotenv
 import os
 from alpaca.data.historical import StockHistoricalDataClient
+from alpaca.data.requests import StockBarsRequest
+from alpaca.data.timeframe import TimeFrame
+from datetime import datetime
 
 # Constants
 Tiingo_API_TOKEN = "7f5ee704a8a6ebd637bbd4360b7f6cbd7418f706" # Replace with your own Tiingo API token
@@ -125,6 +128,42 @@ def fetch_alpaca_data(ticker: str, frequency: str, start_date: str, end_date: st
     SECRET = os.getenv("Alpaca_API_SECRET")
     
     client = StockHistoricalDataClient(Alpaca_API_TOKEN, SECRET)
+    request_params_raw = StockBarsRequest(
+        symbol_or_symbols=ticker,
+        timeframe=TimeFrame.Day if frequency == 'daily' else TimeFrame.Minute,
+        start=datetime.strptime(start_date, '%Y-%m-%d'),
+        end=datetime.strptime(end_date, '%Y-%m-%d') if end_date else None
+    )
+    response_raw = client.get_stock_bars(request_params_raw)
+
+    result = response_raw.df
+
+    if frequency == 'daily':
+        request_params_adj = StockBarsRequest(
+        symbol_or_symbols=ticker,
+        timeframe=TimeFrame.Day if frequency == 'daily' else TimeFrame.Minute,
+        start=datetime.strptime(start_date, '%Y-%m-%d'),
+        end=datetime.strptime(end_date, '%Y-%m-%d') if end_date else None,
+        adjustment='all'
+        )
+        response_adj = client.get_stock_bars(request_params_adj)
+
+        result['adjClose'] = response_adj.df['close']
+
+    # Keep only the relevant columns and rename the index
+    result = result.droplevel('symbol')
+    cols = ['open', 'high', 'low', 'close', 'volume', 'adjClose'] if frequency == 'daily' else ['open', 'high', 'low', 'close', 'volume']
+    result = result[cols]
+    result.index = result.index.rename("date")
+
+    # Parse the index as datetime (drop time info if any)
+    if frequency == 'daily':
+        result.index = result.index.date
+
+    # Ensure the DataFrame is sorted by date
+    result = result.sort_index(ascending=False)
+
+    return result
     
 
 
@@ -179,11 +218,3 @@ def fetch_intraday_data(ticker: str, start_date: str, end_date: str | None = Non
         raise ValueError("Unsupported source. Choose from 'tiingo', 'alpha_vantage', or 'alpaca'.")
 
     return result
-
-if __name__ == "__main__":
-    ticker = "AAPL"
-    start_date = "2025-06-01"
-    end_date = "2025-06-20"
-
-    data = fetch_intraday_data(ticker, start_date, end_date, source='alpha_vantage')
-    print(data.head())
