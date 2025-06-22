@@ -1,4 +1,4 @@
 pandas==2.3.0
 requests==2.32.4
-alpaca==1.0.0
+alpaca-py==0.40.1
 matplotlib==3.10.3
