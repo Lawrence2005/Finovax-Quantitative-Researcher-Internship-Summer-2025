@@ -1,9 +1,11 @@
 import pandas as pd
 import requests
+from alpaca.data.historical import StockHistoricalDataClient
 
 # Constants
 Tiingo_API_TOKEN = "7f5ee704a8a6ebd637bbd4360b7f6cbd7418f706" # Replace with your own Tiingo API token
 Alpha_Vantage_API_TOKEN = "GBMV74GZ3G8DGXO2" # Replace with your own Alpha Vantage API token
+Alpaca_API_TOKEN = "PKBVL4VRUZ91Y4ZTTFKX" # Replace with your own Alpaca API token
 
 def fetch_tiingo_data(ticker: str, frequency: str, start_date: str, end_date: str | None = None) -> pd.DataFrame:
     """
@@ -113,7 +115,10 @@ def fetch_alpaca_data(ticker: str, frequency: str, start_date: str, end_date: st
     Returns:
         pd.DataFrame: DataFrame with date-/datetime-indexed OHLCV(+adj_close) data
     """
-    raise NotImplementedError("Alpaca API integration is not implemented yet.")
+    if frequency not in ['daily', 'intraday']:
+        raise ValueError("Frequency must be either 'daily' or 'intraday'.")
+    
+
 
 def fetch_daily_data(ticker: str, start_date: str, end_date: str | None = None, source: str = 'tiingo') -> pd.DataFrame:
     """
