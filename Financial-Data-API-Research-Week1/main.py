@@ -34,6 +34,7 @@ def fetch_daily_data(ticker: str, start_date: str, end_date: str | None, source:
     # Parse 'date' and set it as the index
     result['date'] = pd.to_datetime(result['date'])
     result.set_index('date', inplace=True)
+    result.index = result.index.date
 
     # Ensure the DataFrame is sorted by date
     result = result.sort_index(ascending=False)
@@ -86,5 +87,5 @@ if __name__ == "__main__":
     start_date = "2023-01-01"
     end_date = "2023-12-31"
 
-    data = fetch_intraday_data(ticker, start_date, end_date)
+    data = fetch_daily_data(ticker, start_date, end_date)
     print(data.head())
