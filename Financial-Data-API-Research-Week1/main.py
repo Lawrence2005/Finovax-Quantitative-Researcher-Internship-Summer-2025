@@ -1,5 +1,7 @@
 import pandas as pd
 import requests
+from dotenv import load_dotenv
+import os
 from alpaca.data.historical import StockHistoricalDataClient
 
 # Constants
@@ -118,7 +120,11 @@ def fetch_alpaca_data(ticker: str, frequency: str, start_date: str, end_date: st
     if frequency not in ['daily', 'intraday']:
         raise ValueError("Frequency must be either 'daily' or 'intraday'.")
     
-    client = StockHistoricalDataClient(Alpaca_API_TOKEN, 'secret-key')
+    # Load Alpaca API secret from environment variables
+    load_dotenv()
+    SECRET = os.getenv("Alpaca_API_SECRET")
+    
+    client = StockHistoricalDataClient(Alpaca_API_TOKEN, SECRET)
     
 
 
