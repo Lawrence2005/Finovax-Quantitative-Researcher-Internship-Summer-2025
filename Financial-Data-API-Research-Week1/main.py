@@ -29,6 +29,8 @@ def fetch_daily_data(ticker: str, start_date: str, end_date: str | None, source:
                   f"https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate={start_date}&endDate={end_date}&format=csv&resampleFreq=monthly"
     requestResponse = requests.get(request_url, headers=headers)
 
+    requestResponse.json()
+
     result = pd.DataFrame(requestResponse.json())
 
     # Parse 'date' and set it as the index
