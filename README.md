@@ -2,7 +2,7 @@
     <img src="images/Finovax Logo.png"/>
 
 # Finovax Quantitative Researcher Internship (Summer 2025)
-This is my multi-project workspace focused on financial data, quantitative research, and backend data tools. This repository includes self-contained projects exploring APIs, data pipelines, algorithmic trading logic, and more.
+This is the multi-project workspace of my quantitative researcher internship at [Finovax](https://www.finovax.com/), focused on financial data, quantitative research, and backend data tools. This repository includes self-contained projects exploring APIs, data pipelines, algorithmic trading logic, and more.
 
 ## 📁 Project Index
 **`Financial-Data-API-Research-Week1/`** *→ [Project README.md](Financial-Data-API-Research-Week1/README.md)*\
