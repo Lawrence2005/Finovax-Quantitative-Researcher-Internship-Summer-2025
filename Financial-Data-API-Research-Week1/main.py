@@ -63,8 +63,8 @@ def fetch_intraday_data(ticker: str, start_date: str, end_date: str | None, sour
         'Content-Type': 'application/json',
         'Authorization' : f'Token {Tiingo_API_TOKEN}'
     }
-    request_url = f"https://api.tiingo.com/iex/{ticker}/prices?startDate={start_date}&resampleFreq=1min" if end_date is None else \
-                  f"https://api.tiingo.com/iex/{ticker}/prices?startDate={start_date}&endDate={end_date}&resampleFreq=1min"
+    request_url = f"https://api.tiingo.com/iex/{ticker}/prices?startDate={start_date}&resampleFreq=1min&columns=open,high,low,close,volume" if end_date is None else \
+                  f"https://api.tiingo.com/iex/{ticker}/prices?startDate={start_date}&endDate={end_date}&resampleFreq=1min&columns=open,high,low,close,volume"
     requestResponse = requests.get(request_url, headers=headers)
 
     result = pd.DataFrame(requestResponse.json())
@@ -86,5 +86,5 @@ if __name__ == "__main__":
     start_date = "2023-01-01"
     end_date = "2023-12-31"
 
-    daily_data = fetch_daily_data(ticker, start_date, end_date)
-    print(daily_data.head())
+    data = fetch_intraday_data(ticker, start_date, end_date)
+    print(data.head())
