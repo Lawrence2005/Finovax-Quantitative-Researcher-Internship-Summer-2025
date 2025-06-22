@@ -118,6 +118,8 @@ def fetch_alpaca_data(ticker: str, frequency: str, start_date: str, end_date: st
     if frequency not in ['daily', 'intraday']:
         raise ValueError("Frequency must be either 'daily' or 'intraday'.")
     
+    client = StockHistoricalDataClient(Alpaca_API_TOKEN, 'secret-key')
+    
 
 
 def fetch_daily_data(ticker: str, start_date: str, end_date: str | None = None, source: str = 'tiingo') -> pd.DataFrame:
