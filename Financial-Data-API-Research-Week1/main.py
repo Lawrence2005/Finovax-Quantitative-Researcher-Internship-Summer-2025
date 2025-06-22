@@ -96,5 +96,5 @@ if __name__ == "__main__":
     start_date = "2023-01-01"
     end_date = "2023-12-31"
 
-    data = fetch_daily_data(ticker, start_date, end_date)
+    data = fetch_daily_data(ticker, start_date, end_date, source='tiingo')
     print(data.head())
