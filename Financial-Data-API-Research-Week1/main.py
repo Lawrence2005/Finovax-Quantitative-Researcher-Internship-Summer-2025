@@ -87,7 +87,7 @@ def fetch_alpha_vantage_data(ticker: str, frequency: str, start_date: str, end_d
         mask = (result.index >= start_date) & ((result.index <= end_date) if end_date else True)
         result = result.loc[mask]
 
-    # Filter out OHLCV(+adj_close), rename, and cast columns to appropriate types
+    # Filter out OHLCV, rename, and cast columns to appropriate types
     result = result[['1. open', '2. high', '3. low', '4. close', '5. volume']]
     result.columns = ['open', 'high', 'low', 'close', 'volume']
     result = result.astype({"open": float, "high": float, "low": float, "close": float, "volume": int})
