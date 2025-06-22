@@ -49,7 +49,7 @@ def fetch_tiingo_data(ticker: str, frequency: str, start_date: str, end_date: st
 
     return result
 
-def fetch_alpha_vantage_date(ticker: str, frequency: str, start_date: str, end_date: str | None = None) -> pd.DataFrame:
+def fetch_alpha_vantage_data(ticker: str, frequency: str, start_date: str, end_date: str | None = None) -> pd.DataFrame:
     """
     Fetches financial data from Alpha Vantage API for a given ticker symbol and date range.
     
@@ -66,20 +66,26 @@ def fetch_alpha_vantage_date(ticker: str, frequency: str, start_date: str, end_d
     if frequency not in ['daily', 'intraday']:
         raise ValueError("Frequency must be either 'daily' or 'intraday'.")
     
-    url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={ticker}&outputsize=full&apikey={Alpha_Vantage_API_TOKEN}'
+    url = f'https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={ticker}&outputsize=full&apikey={Alpha_Vantage_API_TOKEN}' if frequency == 'daily' else \
+          (f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={ticker}&interval=1min&apikey={Alpha_Vantage_API_TOKEN}' if not end_date else \
+           f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={ticker}&interval=1min&month={end_date[:7]}&outputsize=full&apikey={Alpha_Vantage_API_TOKEN}')
     response = requests.get(url)
 
+    print(response.json())  # Debugging line to check the response
+
     # Extract time series data and set 'date' as the index
-    result = pd.DataFrame(response.json()["Time Series (Daily)"]).T
+    section = "Time Series (Daily)" if frequency == 'daily' else "Time Series (1min)"
+    result = pd.DataFrame(response.json()[section]).T
     result.index = pd.to_datetime(result.index)
 
     # Ensure the DataFrame is sorted by date
     result = result.sort_index(ascending=False)
 
     # Filter by date range
-    result = result[result.index >= start_date and (result.index <= end_date if end_date else True)]
+    if frequency == 'daily':
+        result = result[result.index >= start_date and (result.index <= end_date if end_date else True)]
 
-    # Filter out OHLCV(+adj_close) columns
+    # Filter out OHLCV(+adj_close) and rename columns
     cols = ['1. open', '2. high', '3. low', '4. close', '6. volume', '5. adjusted close'] if frequency == 'daily' else ['1. open', '2. high', '3. low', '4. close', '6. volume']
     result = result[cols]
     result.columns = ['open', 'high', 'low', 'close', 'volume', 'adjClose'] if frequency == 'daily' else ['open', 'high', 'low', 'close', 'volume']
@@ -121,7 +127,7 @@ def fetch_daily_data(ticker: str, start_date: str, end_date: str | None = None, 
     if source == 'tiingo':
         result = fetch_tiingo_data(ticker, 'daily', start_date, end_date)
     elif source == 'alpha_vantage':
-        result = fetch_alpha_vantage_date(ticker, 'daily', start_date, end_date)
+        result = fetch_alpha_vantage_data(ticker, 'daily', start_date, end_date)
     elif source == 'alpaca':
         result = fetch_alpaca_data(ticker, 'daily', start_date, end_date)
     else:
@@ -145,7 +151,7 @@ def fetch_intraday_data(ticker: str, start_date: str, end_date: str | None = Non
     if source == 'tiingo':
         result = fetch_tiingo_data(ticker, 'intraday', start_date, end_date)
     elif source == 'alpha_vantage':
-        result = fetch_alpha_vantage_date(ticker, 'intraday', start_date, end_date)
+        result = fetch_alpha_vantage_data(ticker, 'intraday', start_date, end_date)
     elif source == 'alpaca':
         result = fetch_alpaca_data(ticker, 'intraday', start_date, end_date)
     else:
@@ -155,8 +161,8 @@ def fetch_intraday_data(ticker: str, start_date: str, end_date: str | None = Non
 
 if __name__ == "__main__":
     ticker = "AAPL"
-    start_date = "2023-01-01"
-    end_date = "2023-12-31"
+    start_date = "2025-06-01"
+    end_date = "2025-06-20"
 
     data = fetch_daily_data(ticker, start_date, end_date, source='alpha_vantage')
     print(data.head())
