@@ -25,8 +25,8 @@ def fetch_daily_data(ticker: str, start_date: str, end_date: str | None, source:
         'Content-Type': 'application/json',
         'Authorization' : f'Token {Tiingo_API_TOKEN}'
     }
-    request_url = f"https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate={start_date}&format=csv&resampleFreq=monthly" if end_date is None else \
-                  f"https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate={start_date}&endDate={end_date}&format=csv&resampleFreq=monthly"
+    request_url = f"https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate={start_date}&format=csv&resampleFreq=daily" if end_date is None else \
+                  f"https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate={start_date}&endDate={end_date}&format=csv&resampleFreq=daily"
     requestResponse = requests.get(request_url, headers=headers)
 
     requestResponse.json()
@@ -65,8 +65,8 @@ def fetch_intraday_data(ticker: str, start_date: str, end_date: str | None, sour
         'Content-Type': 'application/json',
         'Authorization' : f'Token {Tiingo_API_TOKEN}'
     }
-    request_url = f"https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate={start_date}&format=csv&resampleFreq=1min" if end_date is None else \
-                  f"https://api.tiingo.com/tiingo/daily/{ticker}/prices?startDate={start_date}&endDate={end_date}&format=csv&resampleFreq=1min"
+    request_url = f"https://api.tiingo.com/iex/{ticker}/prices?startDate={start_date}&resampleFreq=1min" if end_date is None else \
+                  f"https://api.tiingo.com/iex/{ticker}/prices?startDate={start_date}&endDate={end_date}&resampleFreq=1min"
     requestResponse = requests.get(request_url, headers=headers)
 
     result = pd.DataFrame(requestResponse.json())
