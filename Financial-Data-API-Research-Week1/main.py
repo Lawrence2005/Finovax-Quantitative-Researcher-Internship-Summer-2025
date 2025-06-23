@@ -47,12 +47,12 @@ def fetch_tiingo_data(ticker: str, frequency: str, start_date: str, end_date: st
     if frequency == 'daily':
         result.index = result.index.date
 
-    # Ensure the DataFrame is sorted by date
-    result = result.sort_index(ascending=False)
-
     # Filter out OHLCV(+adj_close) columns
     cols = ['open', 'high', 'low', 'close', 'volume', 'adjClose'] if frequency == 'daily' else ['open', 'high', 'low', 'close', 'volume']
     result = result[cols]
+
+    # Ensure the DataFrame is sorted by date
+    result = result.sort_index(ascending=False)
 
     return result
 
