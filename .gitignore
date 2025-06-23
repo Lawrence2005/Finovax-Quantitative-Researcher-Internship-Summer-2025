@@ -5,5 +5,8 @@
 __pycache__/
 *.pyc
 
-# Ignore secrets
+# Secrets
 **/.env
+
+# Images
+images/
