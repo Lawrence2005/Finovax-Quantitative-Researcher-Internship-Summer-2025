@@ -7,7 +7,7 @@ This is the multi-project workspace of my quantitative researcher internship at 
 ## 📁 Project Index
 **`Financial-Data-API-Research-Week1/`** *→ [Project README.md](Financial-Data-API-Research-Week1/README.md)*\
 <ins>Purpose:</ins> Evaluate and implement alternative APIs to Yahoo Finance for retrieving U.S. equity OHLC(+adj_close) and volume data. Includes rate-limit comparison, integration testing, and a unified Python data fetcher.\
-<ins>Status:</ins> In progress  
+<ins>Status:</ins> Under Review  
 
 ---
 
