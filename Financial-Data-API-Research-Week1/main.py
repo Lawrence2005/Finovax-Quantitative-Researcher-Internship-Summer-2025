@@ -39,6 +39,10 @@ def fetch_tiingo_data(ticker: str, frequency: str, start_date: str, end_date: st
                    f"https://api.tiingo.com/iex/{ticker}/prices?startDate={start_date}&endDate={end_date}&resampleFreq=1min&columns=open,high,low,close,volume")
     requestResponse = requests.get(request_url, headers=headers)
 
+    # Check if the response is valid
+    if requestResponse.status_code != 200:
+        raise ValueError(f"Error fetching data for {ticker}. Please check the ticker symbol and date range.")
+
     result = pd.DataFrame(requestResponse.json())
 
     # Parse 'date' and set it as the index
@@ -77,6 +81,10 @@ def fetch_alpha_vantage_data(ticker: str, frequency: str, start_date: str, end_d
           (f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={ticker}&interval=1min&apikey={Alpha_Vantage_API_TOKEN}' if not end_date else \
            f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={ticker}&interval=1min&month={end_date[:7]}&outputsize=full&apikey={Alpha_Vantage_API_TOKEN}')
     response = requests.get(url)
+
+    # Check if the response is valid
+    if response.status_code != 200:
+        raise ValueError(f"Error fetching data for {ticker}. Please check the ticker symbol and date range.")
 
     # Extract time series data
     section = "Time Series (Daily)" if frequency == 'daily' else "Time Series (1min)"
@@ -136,6 +144,10 @@ def fetch_alpaca_data(ticker: str, frequency: str, start_date: str, end_date: st
     )
     response_raw = client.get_stock_bars(request_params_raw)
 
+    # Check if the response is valid
+    if not response_raw.df or response_raw.df.empty:
+        raise ValueError(f"Error fetching data for {ticker}. Please check the ticker symbol and date range.")
+
     result = response_raw.df
 
     if frequency == 'daily':
@@ -164,8 +176,6 @@ def fetch_alpaca_data(ticker: str, frequency: str, start_date: str, end_date: st
     result = result.sort_index(ascending=False)
 
     return result
-    
-
 
 def fetch_daily_data(ticker: str, start_date: str, end_date: str | None = None, source: str = 'tiingo') -> pd.DataFrame:
     """
@@ -181,9 +191,6 @@ def fetch_daily_data(ticker: str, start_date: str, end_date: str | None = None, 
         pd.DataFrame: DataFrame with date-indexed OHLCV(+adj_close) data
     """
 
-    # if source != "tiingo":
-    #     raise ValueError("Currently, only Tiingo source is supported.")
-    
     if source == 'tiingo':
         result = fetch_tiingo_data(ticker, 'daily', start_date, end_date)
     elif source == 'alpha_vantage':
