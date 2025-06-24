@@ -10,7 +10,7 @@ This is the multi-project workspace of my quantitative researcher internship at 
 <ins>Status:</ins> Under Review
 
 ---
-**`Market-Regime-Detection-via-Markov-Model-Week2/`** → [Project README.md](Market-Regime-Detection-via-Markov-Model-Week2/README.md)*\
+**`Market-Regime-Detection-via-Markov-Model-Week2/`** *→ [Project README.md](Market-Regime-Detection-via-Markov-Model-Week2/README.md)*\
 <ins>Purpose:</ins> Evaluate and implement Hidden Markov Models (HMM) for detecting market regime shifts in financial time series. Includes state characterization, strategy adaptation examples, and a plain‑language explanatory report for non‑technical stakeholders.\
 <ins>Status:</ins> In Progress
 
