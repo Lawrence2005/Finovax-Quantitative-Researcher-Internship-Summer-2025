@@ -160,6 +160,10 @@ def fetch_alpaca_data(ticker: str, frequency: str, start_date: str, end_date: st
         )
         response_adj = client.get_stock_bars(request_params_adj)
 
+        # Check if the adjusted response is valid
+        if not response_adj.df or response_adj.df.empty:
+            raise ValueError(f"Error fetching adjusted data for {ticker}. Please check the ticker symbol and date range.")
+
         result['adjClose'] = response_adj.df['close']
 
     # Keep only the relevant columns and rename the index
