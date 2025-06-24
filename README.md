@@ -5,9 +5,14 @@
 This is the multi-project workspace of my quantitative researcher internship at [Finovax](https://www.finovax.com/), focused on financial data, quantitative research, and backend data tools. This repository includes self-contained projects exploring APIs, data pipelines, algorithmic trading logic, and more.
 
 ## 📁 Project Index
-**`Financial-Data-API-Research-Week1/`** *→ [Project README.md](Financial-Data-API-Research-Week1/README.md)*\
+**`Financial-Data-API-Research-Week1/`** → [Project README.md](Financial-Data-API-Research-Week1/README.md)*\
 <ins>Purpose:</ins> Evaluate and implement alternative APIs to Yahoo Finance for retrieving U.S. equity OHLC(+adj_close) and volume data. Includes rate-limit comparison, integration testing, and a unified Python data fetcher.\
-<ins>Status:</ins> Under Review  
+<ins>Status:</ins> Under Review
+
+---
+**`Market-Regime-Detection-via-Markov-Model-Week2/`** → [Project README.md](Market-Regime-Detection-via-Markov-Model-Week2/README.md)*\
+<ins>Purpose:</ins> Evaluate and implement Hidden Markov Models (HMM) for detecting market regime shifts in financial time series. Includes state characterization, strategy adaptation examples, and a plain‑language explanatory report for non‑technical stakeholders.\
+<ins>Status:</ins> In Progress
 
 ---
 

@@ -1,5 +1,5 @@
 ## 🎯 Project Background and Significance
-As part of our ongoing initiatives to innovate and improve our quantitative trading strategies, we are exploring the application of Markov models for predicting market regime shifts. Understanding market regimes and the transitions between them is crucial for optimizing trading strategies and mitigating risk.
+As part of our ongoing initiatives to innovate and improve quantitative trading strategies, we are exploring the ***application of Markov models for predicting market regime shifts***. Understanding market regimes and the transitions between them is crucial for optimizing trading strategies and mitigating risk.
 
 ## 📋 Project Requirements
 Please take a deep look into this [article](https://www.quantstart.com/articles/hidden-markov-models-an-introduction/) and then try to work on the following requests and questions:
