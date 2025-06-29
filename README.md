@@ -7,19 +7,19 @@ This is the multi-project workspace of my quantitative researcher internship at 
 ## 📁 Project Index
 **`Financial-Data-API-Research-Week1/`** *→ [Project README.md](Financial-Data-API-Research-Week1/README.md)*\
 <ins>Purpose:</ins> Evaluate and implement alternative APIs to Yahoo Finance for retrieving U.S. equity OHLC(+adj_close) and volume data. Includes rate-limit comparison, integration testing, and a unified Python data fetcher.\
-<ins>Status:</ins> Under Review
+<ins>Status:</ins> ✅
 
 ---
 **`Market-Regime-Detection-via-Markov-Model-Week2/`** *→ [Project README.md](Market-Regime-Detection-via-Markov-Model-Week2/README.md)*\
 <ins>Purpose:</ins> Evaluate and implement Hidden Markov Models (HMM) for detecting market regime shifts in financial time series. Includes state characterization, strategy adaptation examples, and a plain‑language explanatory report for non‑technical stakeholders.\
-<ins>Status:</ins> In Progress
+<ins>Status:</ins> ⏳
 
 ---
 
 ## 🛠️ Tech Stack
 Most projects in this repo are built with:
 - Python (3.12.3)
-- `pandas`, `requests`, `matplotlib`, etc.
+- `pandas`,`numpy`, `sklearn`, `hmmlearn`, `requests`, `matplotlib`, `seaborn`
 - Jupyter Notebooks for exploration and documentation
 - Public/free APIs unless otherwise stated
 
