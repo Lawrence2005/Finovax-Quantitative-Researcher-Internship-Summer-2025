@@ -5,7 +5,7 @@ Finovax seeks to reinforce its risk-management toolkit by **building and rigorou
 - **Process Maturity**: Lays groundwork for future stress-testing automation and integration into our systematic risk-monitoring platform.
 
 ## 📋 Project Requirements
-**1. Replication & Construction**
+**1. Replicate & Construct**
 - Select ETFs: Choose a representative set of ~5 ETFs covering equities, fixed income, commodities, inflation-linked bonds, and cash equivalents (e.g., SPY, TLT, GLD, TIP, BIL).
 - Compute Risk Parity Weights:
     - Download daily price data (last 10 years) via a Python API (e.g., yfinance or another data provider).
@@ -15,7 +15,7 @@ Finovax seeks to reinforce its risk-management toolkit by **building and rigorou
     - Construct daily portfolio returns using those weights and total-return ETF series.
     - Compute annualized return, volatility, Sharpe ratio, and maximum drawdown over the full history.
 
-**2. Stress Testing Under Extreme Scenarios**
+**2. Stress Test Under Extreme Scenarios**
 - Define Scenarios: Select at least 3 historical stress periods, e.g.:
     - 2007–2009 Global Financial Crisis (Oct 2007–Mar 2009)
     - 2015–2016 Commodity Sell-off (Jul 2015–Feb 2016)
@@ -29,7 +29,7 @@ Finovax seeks to reinforce its risk-management toolkit by **building and rigorou
     - Apply hypothetical simultaneous shocks (e.g., –30% equity, +10% rates move, –15% commodity move) to the starting weights and estimate first-day portfolio loss.
     - Compute both a full-history and a 252-day rolling Value-at-Risk (VaR) and Conditional VaR (CVaR) at 95% confidence based on historical daily returns.
 
-**3. Analysis & Recommendations**
+**3. Analyze & Recommend**
 - Interpret Findings:
     - Identify which stress period caused the largest drawdown and discuss why certain asset classes may have underperformed or outperformed.
     - Evaluate whether the risk-parity weights adequately mitigated tail-risk in each case.
