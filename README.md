@@ -15,6 +15,11 @@ This is the multi-project workspace of my quantitative researcher internship at 
 <ins>Status:</ins> ⏳
 
 ---
+**`Risk-Parity-Portfolio-Strategy-Week3/`** *→ [Project README.md](Risk-Parity-Portfolio-Strategy-Week3/README.md)*\
+<ins>Purpose:</ins> Construct and evaluate a classic risk-parity “all-weather” ETF portfolio using Python. Includes volatility-based weighting, historical backtesting, and multi-crisis stress testing to assess robustness and inform risk-monitoring integration.\
+<ins>Status:</ins> ⏳
+
+---
 
 ## 🛠️ Tech Stack
 Most projects in this repo are built with:

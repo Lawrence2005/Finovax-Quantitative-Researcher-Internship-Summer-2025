@@ -37,8 +37,7 @@ Finovax seeks to reinforce its risk-management toolkit by **building and rigorou
 Propose one enhancement to the framework (e.g., dynamic rebalancing frequency, inclusion of volatility targeting, use of alternative risk measures). Feel free to research existing academic research reports or industry papers to find related results & recommendations/enhancements
 
 ## 📦 Deliverable
-- Deliverable 1: Jupyter notebook with clean, well-commented Python code and summary performance tables/plots (use Plotly for interactivity).
-- Deliverable 3: A concise report (4–5 pages) summarizing methodology, stress-test results, key insights, and proposed enhancement. Include summary plots embedded from the notebook.
+A Jupyter notebook, containing clean, well-commented Python code and summary performance tables/plots in Plotly (for interactivity), and a concise report of 4–5 pages summarizing methodology, stress-test results, key insights, and proposed enhancement, embedding summary plots from the notebook.
 - Coding Standards:
     - Use Python 3.x with clear modular functions.
     - Employ pandas, numpy, and any plotting library (Plotly preferred).
