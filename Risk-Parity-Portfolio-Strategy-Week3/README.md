@@ -14,6 +14,7 @@ Finovax seeks to reinforce its risk-management toolkit by **building and rigorou
 - Backtest Performance:
     - Construct daily portfolio returns using those weights and total-return ETF series.
     - Compute annualized return, volatility, Sharpe ratio, and maximum drawdown over the full history.
+
 **2. Stress Testing Under Extreme Scenarios**
 - Define Scenarios: Select at least 3 historical stress periods, e.g.:
     - 2007–2009 Global Financial Crisis (Oct 2007–Mar 2009)
@@ -27,6 +28,7 @@ Finovax seeks to reinforce its risk-management toolkit by **building and rigorou
 - Extreme-Shock Simulation (Optional Advanced):
     - Apply hypothetical simultaneous shocks (e.g., –30% equity, +10% rates move, –15% commodity move) to the starting weights and estimate first-day portfolio loss.
     - Compute both a full-history and a 252-day rolling Value-at-Risk (VaR) and Conditional VaR (CVaR) at 95% confidence based on historical daily returns.
+
 **3. Analysis & Recommendations**
 - Interpret Findings:
     - Identify which stress period caused the largest drawdown and discuss why certain asset classes may have underperformed or outperformed.
