@@ -11,30 +11,29 @@ Finovax seeks to reinforce its risk-management toolkit by **building and rigorou
     - Download daily price data (last 10 years) via a Python API (e.g., yfinance or another data provider).
     - Calculate rolling 126-day volatility for each ETF.
     - Invert volatilities and scale to sum to 100% to derive daily risk-parity weights.
-C. Backtest Performance:
- a. Construct daily portfolio returns using those weights and total-return ETF series.
- b. Compute annualized return, volatility, Sharpe ratio, and maximum drawdown over the full history.
-D. Deliverable: Jupyter notebook with clean, well-commented Python code and summary performance tables/plots (use Plotly for interactivity).
-Step 2. Stress Testing Under Extreme Scenarios
-A. Define Scenarios: Select at least 3 historical stress periods, e.g.:
+- Backtest Performance:
+    - Construct daily portfolio returns using those weights and total-return ETF series.
+    - Compute annualized return, volatility, Sharpe ratio, and maximum drawdown over the full history.
+2. Stress Testing Under Extreme Scenarios
+- Define Scenarios: Select at least 3 historical stress periods, e.g.:
  a. 2007–2009 Global Financial Crisis (Oct 2007–Mar 2009)
  b. 2015–2016 Commodity Sell-off (Jul 2015–Feb 2016)
  c. March 2020 COVID-19 Crash (Feb–Apr 2020)
  d. 2022 Russian-Ukraine War sell-off
  e. 2025 Feb-April sell-off
-B. Scenario Analysis:
+- Scenario Analysis:
  a. Recompute portfolio performance metrics (cumulative return, peak drawdown, recovery time) for each stress window.
  b. Visualize equity-curve overlays for all scenarios alongside the full-history curve.
-C. Extreme-Shock Simulation (Optional Advanced):
+- Extreme-Shock Simulation (Optional Advanced):
  a. Apply hypothetical simultaneous shocks (e.g., –30% equity, +10% rates move, –15% commodity move) to the starting weights and estimate first-day portfolio loss.
  b. Compute both a full-history and a 252-day rolling Value-at-Risk (VaR) and Conditional VaR (CVaR) at 95% confidence based on historical daily returns.
-Step 3. Analysis & Recommendations
-A. Interpret Findings:
+3. Analysis & Recommendations
+- Interpret Findings:
  a. Identify which stress period caused the largest drawdown and discuss why certain asset classes may have underperformed or outperformed.
  b. Evaluate whether the risk-parity weights adequately mitigated tail-risk in each case.
-B. Next Steps:
+- Next Steps:
  Propose one enhancement to the framework (e.g., dynamic rebalancing frequency, inclusion of volatility targeting, use of alternative risk measures). Feel free to research existing academic research reports or industry papers to find related results & recommendations/enhancements
-C. Deliverable: A concise report (4–5 pages) summarizing methodology, stress-test results, key insights, and proposed enhancement. Include summary plots embedded from the notebook.
 
 ## 📦 Deliverable
-A PDF report of at least 3 pages, formatted in 12-pt Times New Roman, and a .py or .ipynb code file containing all the Python code, with a list of reference links at the end of both.
+- Deliverable 1: Jupyter notebook with clean, well-commented Python code and summary performance tables/plots (use Plotly for interactivity).
+- Deliverable 3: A concise report (4–5 pages) summarizing methodology, stress-test results, key insights, and proposed enhancement. Include summary plots embedded from the notebook.
