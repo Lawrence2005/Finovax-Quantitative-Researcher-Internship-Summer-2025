@@ -38,7 +38,7 @@ Propose one enhancement to the framework (e.g., dynamic rebalancing frequency, i
 
 ## 📦 Deliverable
 A Jupyter notebook that:
-- contains clean, well-commented Python 3.x code with clear modular functions and each code cell preceded by an explanatory markdown.
+- contains clean, well-commented Python 3.x code with clear modular functions and each code cell preceded by an explanatory markdown
 - shows summary performance tables/plots, preferrably in Plotly for interactivity
 - employs pandas and numpy
 - includes a single script or notebook cell that installs or imports all required packages to ensure reproducibility
@@ -46,4 +46,4 @@ A Jupyter notebook that:
 and a report that:
 - contains an executive summary, methodology, stress-test results, key insights, and proposed enhancement
 - embeds summary plots, clearly labeled (axis titles, legends, scenario annotations), from the notebook
-- is of 4–5 pages 
+- is of 4–5 pages.
