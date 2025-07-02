@@ -6,7 +6,8 @@ Finovax seeks to reinforce its risk-management toolkit by **building and rigorou
 
 ## 📋 Project Requirements
 **1. Replicate & Construct**
-- Select ETFs: Choose a representative set of ~5 ETFs covering equities, fixed income, commodities, inflation-linked bonds, and cash equivalents (e.g., SPY, TLT, GLD, TIP, BIL).
+- Select ETFs: 
+    - Choose a representative set of ~5 ETFs covering equities, fixed income, commodities, inflation-linked bonds, and cash equivalents (e.g., SPY, TLT, GLD, TIP, BIL).
 - Compute Risk Parity Weights:
     - Download daily price data (last 10 years) via a Python API (e.g., yfinance or another data provider).
     - Calculate rolling 126-day volatility for each ETF.
@@ -22,10 +23,10 @@ Finovax seeks to reinforce its risk-management toolkit by **building and rigorou
     - March 2020 COVID-19 Crash (Feb–Apr 2020)
     - 2022 Russian-Ukraine War sell-off
     - 2025 Feb-April sell-off
-- Scenario Analysis:
+- Analyze Scenarios:
     - Recompute portfolio performance metrics (cumulative return, peak drawdown, recovery time) for each stress window.
     - Visualize equity-curve overlays for all scenarios alongside the full-history curve.
-- Extreme-Shock Simulation (Optional Advanced):
+- Simulate Extreme-Shock (Optional Advanced):
     - Apply hypothetical simultaneous shocks (e.g., –30% equity, +10% rates move, –15% commodity move) to the starting weights and estimate first-day portfolio loss.
     - Compute both a full-history and a 252-day rolling Value-at-Risk (VaR) and Conditional VaR (CVaR) at 95% confidence based on historical daily returns.
 
@@ -34,7 +35,7 @@ Finovax seeks to reinforce its risk-management toolkit by **building and rigorou
     - Identify which stress period caused the largest drawdown and discuss why certain asset classes may have underperformed or outperformed.
     - Evaluate whether the risk-parity weights adequately mitigated tail-risk in each case.
 - Next Steps:
-Propose one enhancement to the framework (e.g., dynamic rebalancing frequency, inclusion of volatility targeting, use of alternative risk measures). Feel free to research existing academic research reports or industry papers to find related results & recommendations/enhancements
+    - Propose one enhancement to the framework (e.g., dynamic rebalancing frequency, inclusion of volatility targeting, use of alternative risk measures). Feel free to research existing academic research reports or industry papers to find related results & recommendations/enhancements
 
 ## 📦 Deliverable
 A Jupyter notebook that:
