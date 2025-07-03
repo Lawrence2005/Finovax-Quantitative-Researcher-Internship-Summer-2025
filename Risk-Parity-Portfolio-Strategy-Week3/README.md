@@ -39,7 +39,7 @@ Finovax seeks to reinforce its risk-management toolkit by **building and rigorou
 
 ## 📦 Deliverable
 A Jupyter notebook that:
-- contains clean, well-commented Python 3.x code with clear modular functions and each code cell preceded by an explanatory markdown
+- contains clean, well-commented Python 3.x code with clear modular functions and code cells preceded by explanatory markdowns
 - shows summary performance tables/plots, preferrably in Plotly for interactivity
 - employs pandas and numpy
 - includes a single script or notebook cell that installs or imports all required packages to ensure reproducibility
