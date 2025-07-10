@@ -29,7 +29,7 @@ This is the multi-project workspace of my quantitative researcher internship at 
 ## 🛠️ Tech Stack
 Most projects in this repo are built with:
 - Python (3.12.3)
-- `pandas`,`numpy`, `sklearn`, `hmmlearn`, `requests`, `matplotlib`, `seaborn`
+- `pandas`,`numpy`, `sklearn`, `scipy`, `hmmlearn`, `requests`, `matplotlib`, `seaborn`, `plotly`
 - Jupyter Notebooks for exploration and documentation
 - Public/free APIs unless otherwise stated
 
