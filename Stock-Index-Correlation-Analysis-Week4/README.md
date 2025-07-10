@@ -3,7 +3,7 @@ In the constantly evolving financial markets, understanding the intricate relati
 Correlation analysis has emerged as a powerful tool in portfolio management, risk mitigation, and investment strategy formulation. By examining how the daily returns of individual stocks correlate with these benchmark indices, we can **glean insights into systemic risks, company-specific volatility, and overall market sensitivity**. This project aims to employ Python to visually and quantitatively **explore the correlation between individual companies within the DJIA and Nasdaq 100 indices against their respective benchmark index**, which is pivotal for investors looking to align their portfolios with market movements, hedge against systemic risks, or exploit stock-specific anomalies.
 
 ## 📋 Project Requirements
-**Filtering and Analysis**
+**Filtering and Analysis**\
 Please develop a computational methodology to filter and identify companies that exhibit a high correlation (greater than 0.7) with their respective 2 indices (i.e. DJIA for Dow-listed companies and Nasdaq 100 for Nasdaq-listed companies) over the past three years. Do not cross-compare---correlate DJIA's stocks with Nasdaq Index while filtering, and vice versa. In this process, please also find live-updating sources that can provide the most up-to-date information about these 2 indices' stock tickers to get their price data. (Consider using data sources like Yahoo Finance and their Python API to retrieve historical daily price data.) This will aid in pinpointing stocks that closely follow market movements and are potentially more exposed to systemic market risks.
 
 ## 📦 Deliverable
