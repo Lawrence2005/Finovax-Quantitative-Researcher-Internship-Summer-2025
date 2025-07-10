@@ -20,6 +20,11 @@ This is the multi-project workspace of my quantitative researcher internship at 
 <ins>Status:</ins> ⏳
 
 ---
+**`Stock-Index-Correlation-Analysis-Week4/`** *→ [Project README.md](Stock-Index-Correlation-Analysis-Week4/README.md)*\
+<ins>Purpose:</ins> Analyze and visualize the correlation between individual stocks and their respective benchmark indices (DJIA and Nasdaq-100) over the past three years. Includes automated ticker retrieval, daily return calculation, correlation filtering (ρ > 0.7), and output of high-sensitivity stocks to identify systemic risk exposures.\
+<ins>Status:</ins> ⏳
+
+---
 
 ## 🛠️ Tech Stack
 Most projects in this repo are built with:
