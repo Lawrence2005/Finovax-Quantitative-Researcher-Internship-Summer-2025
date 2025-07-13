@@ -5,7 +5,7 @@ Correlation analysis has emerged as a powerful tool in portfolio management, ris
 ## 📋 Project Requirements
 **Filtering and Analysis**
 - Develop a computational methodology to filter and identify companies that exhibit a high correlation (greater than 0.7) with their respective 2 indices (i.e. DJIA for Dow-listed companies and Nasdaq 100 for Nasdaq-listed companies) over the past three years. Do not cross-compare, or correlate DJIA's stocks with Nasdaq Index while filtering, and vice versa.
-- Find live-updating sources that can provide the most up-to-date information about these 2 indices' stock tickers to get their price data. (Consider data sources like Yahoo Finance and their Python API to retrieve historical daily price data.) This will aid in pinpointing stocks that closely follow market movements and are potentially more exposed to systemic market risks.
+    - Find live-updating sources that can provide the most up-to-date information about these 2 indices' stock tickers to get their price data. (Consider data sources like Yahoo Finance and their Python API to retrieve historical daily price data.) This will aid in pinpointing stocks that closely follow market movements and are potentially more exposed to systemic market risks.
 
 ## 📦 Deliverable
 A .py file
