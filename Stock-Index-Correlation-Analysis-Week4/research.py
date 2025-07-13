@@ -80,7 +80,7 @@ def calculate_rolling_correlation(returns: pd.DataFrame, window: int = 30):
     pd.DataFrame: DataFrame containing rolling correlation coefficients.
     """
 
-    return returns.rolling(window=window).corr(returns.iloc[:, -1]).dropna()
+    return returns.iloc[:, :-1].rolling(window=window).corr(returns.iloc[:, -1]).dropna()
 
 # Function to filter stocks based on correlation threshold
 def filter_stocks_by_correlation(correlation: pd.Series, threshold: float = 0.7):
@@ -156,7 +156,7 @@ def plot_correlation_scatter(correlations: pd.Series, returns: pd.DataFrame, ind
     """
 
     # Select top 3 highly correlated stocks
-    top_stocks = correlations.sort_values(ascending=False).head(3).index
+    top_stocks = correlations.abs().sort_values(ascending=False).head(3).index
 
     # Set up the figure
     plt.figure(figsize=(8, 6))
@@ -180,7 +180,7 @@ def plot_correlation_scatter(correlations: pd.Series, returns: pd.DataFrame, ind
         )
 
     # Add title and labels
-    plt.title(f"Daily Return Scatter: Top 3 DJIA Stocks vs {index}")
+    plt.title(f"Daily Return Scatter: Top 3 {index} Stocks vs {index}")
     plt.xlabel(f"{index} Daily Return")
     plt.ylabel("Stock Daily Return")
     plt.axhline(0, color='gray', linestyle='--', linewidth=0.5)
@@ -190,11 +190,40 @@ def plot_correlation_scatter(correlations: pd.Series, returns: pd.DataFrame, ind
     plt.tight_layout()
     plt.savefig(f"{index}_correlation_scatter.png")
 
+# Function to plot rolling correlation
+def plot_rolling_correlation(returns: pd.DataFrame, index: str, window: int = 30):
+    """
+    Plot rolling Pearson correlation coefficients for daily returns of most correlated stocks.
+
+    Parameters:
+    returns (pd.DataFrame): DataFrame containing daily returns of stocks and index.
+    index (str): Stock index ticker symbol ('DJIA' or 'NASDAQ-100').
+    window (int): Window size for rolling correlation (default to 30).
+    """
+
+    rolling_corr = calculate_rolling_correlation(returns, window)
+    
+    top_stocks = rolling_corr.iloc[-1].abs().sort_values(ascending=False).head(3).index
+    rolling_corr = rolling_corr[top_stocks]
+
+    plt.figure(figsize=(12, 6))
+
+    sns.lineplot(data=rolling_corr)
+
+    plt.title(f"Rolling Pearson Correlation Coefficients for Top {index} Stocks (window = {window} days)")
+    plt.xlabel("Date")
+    plt.ylabel("Correlation Coefficient")
+    plt.axhline(0.7, color='red', linestyle='--', linewidth=0.5)
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig(f"{index}_rolling_correlation_{window}.png")
+
 for index in ['DJIA', 'NASDAQ-100']:
-    # stocks = find_high_correlation_stocks('DJIA', START_DATE, END_DATE, 0.7)
+    # stocks = find_high_correlation_stocks(index, START_DATE, END_DATE, 0.7)  # Uncomment to find all high correlation stocks
     prices = fetch_stock_data(index, START_DATE, END_DATE)
     daily_returns = calculate_daily_returns(prices)
     correlation = calculate_pearson_correlation(daily_returns)
+
     plot_correlation_distribution(correlation, index)
     plot_correlation_scatter(correlation, daily_returns, index)
-
+    plot_rolling_correlation(daily_returns, index)
