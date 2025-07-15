@@ -1,9 +1,7 @@
 ## 🎯 Project Background and Significance
-In today's fast-moving and news-sensitive financial markets, investor sentiment plays an increasingly important role in asset price movements—especially in the short term. With the explosive growth of financial news, social media platforms (e.g., Twitter, Reddit), and automated trading, the ability to quantify public sentiment using Natural Language Processing (NLP) has become a valuable edge in both discretionary and algorithmic trading.
-
-This project explores the landscape of NLP-driven sentiment analysis in the financial domain, aiming to bridge qualitative market signals with quantitative strategy design. By evaluating widely used web platforms and APIs for sentiment data, testing sentiment extraction with modern NLP models like FinBERT, and comparing how sentiment trends align with asset prices, this work helps **assess how reliable and actionable sentiment signals are in real trading environments**.
-
-More importantly, this project also builds an end-to-end sentiment analysis pipeline with real-world use cases. It **lays the groundwork for incorporating alternative, text-based signals into trading systems and research workflows**.
+In today's fast-moving and news-sensitive financial markets, investor sentiment plays an increasingly important role in asset price movements—especially in the short term. With the explosive growth of financial news, social media platforms (e.g., Twitter, Reddit), and automated trading, the ability to quantify public sentiment using Natural Language Processing (NLP) has become a valuable edge in both discretionary and algorithmic trading.\
+This project explores the landscape of NLP-driven sentiment analysis in the financial domain, aiming to bridge qualitative market signals with quantitative strategy design. By evaluating widely used web platforms and APIs for sentiment data, testing sentiment extraction with modern NLP models like FinBERT, and comparing how sentiment trends align with asset prices, this work helps **assess how reliable and actionable sentiment signals are in real trading environments**.\
+Additionally, this project also builds an end-to-end sentiment analysis pipeline with real-world use cases. It **lays the groundwork for incorporating alternative, text-based signals into trading systems and research workflows**.
 
 ## 📋 Project Requirements
 Please write a research report related to NLP-driven sentiment analysis on the financial market including answering the following questions:
