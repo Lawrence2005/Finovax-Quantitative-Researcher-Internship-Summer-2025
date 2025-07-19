@@ -17,16 +17,20 @@ The mission of this project is to develop a comprehensive Python-based data tool
     - Walmart Inc. (WMT) - Consumer Staples
     - American Tower Corporation (AMT)
 - Ensure data spans at least five years to analyze both short-term and long-term trends.
+
 **2. Data Cleaning and Preparation**
 - Check for missing values and anomalies in the data. Missing data points should be interpolated or filled using a suitable method, such as forward filling or using the mean of nearby points.
 - Normalize the data if necessary to ensure consistency, especially when comparing stocks of different price ranges.
+
 **3. Data Analysis**
 - Calculate moving averages for different time windows (e.g., 50-day and 200-day moving averages) to identify trends.
 - Use statistical measures such as the standard deviation and variance to assess market volatility.
 - Implement technical indicators like the Relative Strength Index (RSI) and Moving Average Convergence Divergence (MACD) to support trend analysis.
+
 **4. Visualization**
 - Develop interactive charts using libraries such as Matplotlib and Plotly in Python. These should include line graphs for stock prices and moving averages, histograms for volume analysis, and scatter plots for volatility assessment.
 - Create a dashboard that dynamically displays data and analytics results, allowing users to select different stocks or time frames for detailed analysis.
+
 **5. Interpretation of Results**
 - Analyze the output from the moving averages and technical indicators to identify potential buy or sell signals.
 - Compare the performance of different stocks and identify any correlations between market movements and external economic indicators.
