@@ -11,7 +11,7 @@ The stock list is as follows:
 - Exxon Mobil Corp. (XOM) - Energy
 - Procter & Gamble Co. (PG) - Consumer Staples
 - Walmart Inc. (WMT) - Consumer Staples
-- American Tower Corporation (AMT)
+- American Tower Corporation (AMT)\
 The mission of this project is to develop a comprehensive Python-based data tool demo that leverages data from Yahoo Finance to analyze and report on equity market trends. This tool will help identify potential investment opportunities by examining historical price movements and trends in the stock market. Specifically, this analysis will aid our clients in recognizing potential bullish or bearish markets or stocks, helping them make better investment choices. It will also provide a foundation for further detailed analysis, such as sector performance or individual stock volatility.
 
 ## 📋 Project Requirements
