@@ -4,19 +4,18 @@ The mission of this project is to develop a comprehensive Python-based data tool
 
 ## 📋 Project Requirements
 1. Data Acquisition:
-For the following list of stocks:
-- Apple Inc. (AAPL) - Technology
-- Microsoft Corp. (MSFT) - Technology
-- Amazon.com Inc. (AMZN) - Consumer Discretionary
-- Tesla Inc. (TSLA) - Consumer Discretionary
-- NVIDIA Corp. (NVDA) - Technology
-- Johnson & Johnson (JNJ) - Healthcare
-- JPMorgan Chase & Co. (JPM) - Financials
-- Exxon Mobil Corp. (XOM) - Energy
-- Procter & Gamble Co. (PG) - Consumer Staples
-- Walmart Inc. (WMT) - Consumer Staples
-- American Tower Corporation (AMT)\
-- Use the Yahoo Finance API to fetch historical stock prices and trading volumes for a predefined list of stocks. This list can be comprised of stocks from various sectors to provide a broad market overview. 
+- Use the Yahoo Finance API to fetch historical stock prices and trading volumes for the following list of stocks from various sectors to provide a broad market overview:
+    - Apple Inc. (AAPL) - Technology
+    - Microsoft Corp. (MSFT) - Technology
+    - Amazon.com Inc. (AMZN) - Consumer Discretionary
+    - Tesla Inc. (TSLA) - Consumer Discretionary
+    - NVIDIA Corp. (NVDA) - Technology
+    - Johnson & Johnson (JNJ) - Healthcare
+    - JPMorgan Chase & Co. (JPM) - Financials
+    - Exxon Mobil Corp. (XOM) - Energy
+    - Procter & Gamble Co. (PG) - Consumer Staples
+    - Walmart Inc. (WMT) - Consumer Staples
+    - American Tower Corporation (AMT)
 - Ensure data spans at least five years to analyze both short-term and long-term trends.
 2. Data Cleaning and Preparation:
 - Check for missing values and anomalies in the data. Missing data points should be interpolated or filled using a suitable method, such as forward filling or using the mean of nearby points.
@@ -33,8 +32,8 @@ For the following list of stocks:
 - Compare the performance of different stocks and identify any correlations between market movements and external economic indicators.
 
 ## 📦 Deliverable
-1. A Comprehensive Report (PDF format):
-2. An introduction to the tools and methodologies used.
-3. Detailed findings from the data analysis, including visualizations.
-4. Conclusions drawn from the statistical tests and predictive analytics.
-5. Python Scripts: Fully commented Python scripts that document the entire process from data fetching to analysis and visualization.
+A comprehensive PDF report containing:
+- an introduction to the tools and methodologies used
+- detailed findings from the data analysis, including visualizations
+- conclusions drawn from the statistical tests and predictive analytics
+and a fully commented .py file that documents the entire process from data fetching to analysis and visualization.
