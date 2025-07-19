@@ -1,6 +1,10 @@
 ## 🎯 Project Background and Significance
 Understanding equity market trends is essential for investors and traders to make informed decisions. By analyzing historical data, one can discern patterns that might indicate future market movements. This project will focus on extracting data for a select group of stocks, analyzing these data for trend patterns, and visualizing the results to provide clear, actionable insights.\
-The stock list is as follows:
+The mission of this project is to develop a comprehensive Python-based data tool demo that leverages data from Yahoo Finance to analyze and report on equity market trends. This tool will help identify potential investment opportunities by examining historical price movements and trends in the stock market. Specifically, this analysis will aid our clients in recognizing potential bullish or bearish markets or stocks, helping them make better investment choices. It will also provide a foundation for further detailed analysis, such as sector performance or individual stock volatility.
+
+## 📋 Project Requirements
+1. Data Acquisition:
+For the following list of stocks:
 - Apple Inc. (AAPL) - Technology
 - Microsoft Corp. (MSFT) - Technology
 - Amazon.com Inc. (AMZN) - Consumer Discretionary
@@ -12,11 +16,7 @@ The stock list is as follows:
 - Procter & Gamble Co. (PG) - Consumer Staples
 - Walmart Inc. (WMT) - Consumer Staples
 - American Tower Corporation (AMT)\
-The mission of this project is to develop a comprehensive Python-based data tool demo that leverages data from Yahoo Finance to analyze and report on equity market trends. This tool will help identify potential investment opportunities by examining historical price movements and trends in the stock market. Specifically, this analysis will aid our clients in recognizing potential bullish or bearish markets or stocks, helping them make better investment choices. It will also provide a foundation for further detailed analysis, such as sector performance or individual stock volatility.
-
-## 📋 Project Requirements
-1. Data Acquisition:
-- Use the Yahoo Finance API to fetch historical stock prices and trading volumes for a predefined list of stocks. This list can be comprised of stocks from various sectors to provide a broad market overview.
+- Use the Yahoo Finance API to fetch historical stock prices and trading volumes for a predefined list of stocks. This list can be comprised of stocks from various sectors to provide a broad market overview. 
 - Ensure data spans at least five years to analyze both short-term and long-term trends.
 2. Data Cleaning and Preparation:
 - Check for missing values and anomalies in the data. Missing data points should be interpolated or filled using a suitable method, such as forward filling or using the mean of nearby points.
