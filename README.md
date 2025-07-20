@@ -22,11 +22,16 @@ This is the multi-project workspace of my quantitative researcher internship at 
 ---
 **`Stock-Index-Correlation-Analysis-Week4/`** *→ [Project README.md](Stock-Index-Correlation-Analysis-Week4/README.md)*\
 <ins>Purpose:</ins> Analyze and visualize the correlation between individual stocks and their respective benchmark indices (DJIA and Nasdaq-100) over the past three years. Includes automated ticker retrieval, daily return calculation, correlation filtering (ρ > 0.7), and output of high-sensitivity stocks to identify systemic risk exposures.\
-<ins>Status:</ins> ⏳
+<ins>Status:</ins> ✅
 
 ---
 **`NLP-Market-Sentiment-Analysis-Week5/`** *→ [Project README.md](NLP-Market-Sentiment-Analysis-Week5/README.md)*\
 <ins>Purpose:</ins> Investigate and implement NLP-driven sentiment analysis methods applied to financial markets. Includes evaluation of major web-based sentiment sources, accuracy/backtest evidence, and practical implementation using FinBERT, Reddit/Twitter scraping, and price correlation visualization in Python.\
+<ins>Status:</ins> ⏳
+
+---
+**`Equity-Market-Insights-via-Stock-Trend-Analysis-Week6/`** *→ [Project README.md](Equity-Market-Insights-via-Stock-Trend-Analysis-Week6/README.md)*\
+<ins>Purpose:</ins> Develop a Python-based tool to extract, analyze, and visualize five years of historical equity data from Yahoo Finance across 11 major U.S. stocks. Includes technical indicator implementation (MA, RSI, MACD), volatility and volume analysis, and interactive dashboards to identify potential investment signals and cross-sector performance trends.\
 <ins>Status:</ins> ⏳
 
 ---
