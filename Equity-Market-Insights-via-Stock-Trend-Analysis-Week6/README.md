@@ -39,5 +39,5 @@ The mission of this project is to develop a comprehensive Python-based data tool
 A comprehensive PDF report containing:
 - an introduction to the tools and methodologies used
 - detailed findings from the data analysis, including visualizations
-- conclusions drawn from the statistical tests and predictive analytics
+- conclusions drawn from the statistical tests and predictive analytics\
 and a fully commented .py file that documents the entire process from data fetching to analysis and visualization.
