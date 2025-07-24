@@ -1,6 +1,8 @@
 dash==3.1.1
+matplotlib==3.10.3
 numpy==2.3.1
 pandas==2.3.1
 plotly==5.22.0
 Requests==2.32.4
+seaborn==0.13.2
 yfinance==0.2.65
