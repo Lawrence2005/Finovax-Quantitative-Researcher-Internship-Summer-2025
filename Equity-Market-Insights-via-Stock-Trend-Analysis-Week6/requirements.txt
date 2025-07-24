@@ -2,4 +2,5 @@ dash==3.1.1
 numpy==2.3.1
 pandas==2.3.1
 plotly==5.22.0
+Requests==2.32.4
 yfinance==0.2.65
