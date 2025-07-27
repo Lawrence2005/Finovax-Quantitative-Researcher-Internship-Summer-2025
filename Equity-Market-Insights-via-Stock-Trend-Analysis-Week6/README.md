@@ -41,4 +41,4 @@ A comprehensive PDF report containing:
 - detailed findings from the data analysis, including visualizations
 - conclusions drawn from the statistical tests and predictive analytics
 
-and a fully commented .py file that documents the entire process from data fetching to analysis and visualization.
+and a fully commented .ipynb file that documents the entire process from data fetching to analysis and visualization.
