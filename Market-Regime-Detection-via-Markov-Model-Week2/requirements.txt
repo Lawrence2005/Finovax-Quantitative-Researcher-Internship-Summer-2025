@@ -6,4 +6,3 @@ scikit_learn==1.7.1
 seaborn==0.13.2
 requests==2.32.4
 python-dotenv==1.1.0
-alpaca-py==0.40.1
