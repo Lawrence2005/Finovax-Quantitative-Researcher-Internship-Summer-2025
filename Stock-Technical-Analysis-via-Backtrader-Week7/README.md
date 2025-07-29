@@ -5,8 +5,7 @@ Please harness the power of Backtrader and Plotly to visualize and analyze the s
 ## 📋 Project Requirements
 **1. Indicator Analysis**
 - Use the Backtrader library to access and plot at least 40 built-in technical indicators against AAPL's stock data.
-- Ensure your selection includes a balanced mix of volume, momentum, volatility, and trend indicators.
-- Refer to the list of indicators [here](https://github.com/bukosabino/ta) for guidance.
+- Ensure your selection includes a balanced mix of volume, momentum, volatility, and trend indicators. (Refer to the list of indicators [here](https://github.com/bukosabino/ta) for guidance.)
 
 **2. Visualization**
 - Utilize Plotly to create dynamic, interactive charts that display AAPL's candlestick and volume data alongside the selected technical indicators.
