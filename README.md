@@ -35,7 +35,7 @@ This is the multi-project workspace of my quantitative researcher internship at 
 <ins>Status:</ins> ⏳
 
 ---
-**`Stock-Technical-Analysis-via-Backtrader-Week7/`** *→ [Project README.md](EStock-Technical-Analysis-via-Backtrader-Week7/README.md)*\
+**`Stock-Technical-Analysis-via-Backtrader-Week7/`** *→ [Project README.md](Stock-Technical-Analysis-via-Backtrader-Week7/README.md)*\
 <ins>Purpose:</ins> Visualize and analyze the price movements of AAPL stock using over 40 built-in technical indicators from Backtrader, spanning volume, momentum, volatility, and trend categories. Includes interactive Plotly charts, plain-language explanations of indicators, and comparative insights to deepen understanding of their applications in trading strategies.\
 <ins>Status:</ins> ⏳
 
