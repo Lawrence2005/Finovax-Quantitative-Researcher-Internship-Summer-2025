@@ -40,6 +40,11 @@ This is the multi-project workspace of my quantitative researcher internship at 
 <ins>Status:</ins> ⏳
 
 ---
+**`Momentum-Stock-Screener-Week8/`** *→ [Project README.md](Momentum-Stock-Screener-Week8/README.md)*\
+<ins>Purpose:</ins> Build a Python-based momentum screener to identify Nasdaq-100 stocks exhibiting breakout signals. Includes automated data retrieval from Yahoo Finance, detection of recent uptrend breakouts via customizable technical rules, and validation of pattern effectiveness through backtesting and statistical analysis of post-signal returns.\
+<ins>Status:</ins> ⏳
+
+---
 
 
 ## 🛠️ Tech Stack
