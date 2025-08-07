@@ -7,7 +7,7 @@ This project applies this knowledge across a broader universe of stocks, namely 
 - Download the pool of all Nasdaq 100 stocks using Python API from solid data sources like Yahoo Finance, and store them into a data folder.
 
 **2. Stock Analysis**
-- Use a certain indicator, or a variety of indicators, or their variations, to detect and find stocks on the latest day that break-out to form the uptrend. The code pipeline should be able to analyze and give latest results on a folder of Yahoo Finance's formats (Date, Open, High, Low, Close, Adj Close, Volume) of data including multiple csv files, with latest dates of data.
+- Use a certain indicator, or a variety of indicators, or their variations, to detect and find stocks on the latest day that break-out to form the uptrend. The code pipeline should be able to analyze and give latest results on a folder of Yahoo Finance's formats (Date, Open, High, Low, Close, Adj Close, Volume) of data up to the latest date, including multiple csv files
 
 **3. Backtest**
 - Prove the strategy can indeed identify the stocks' trend up-break by presenting statistical analysis and solid numbers (e.g. use numbers and data to prove that in history, after the stock meets a certain pattern/condition that the indicators present, the price of the stock indeed increases in the later days to a certain level). Please make sure these findings have solid statistical significance.
