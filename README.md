@@ -37,11 +37,16 @@ This is the multi-project workspace of my quantitative researcher internship at 
 ---
 **`Stock-Technical-Analysis-via-Backtrader-Week7/`** *→ [Project README.md](Stock-Technical-Analysis-via-Backtrader-Week7/README.md)*\
 <ins>Purpose:</ins> Visualize and analyze the price movements of AAPL stock using over 40 built-in technical indicators from Backtrader, spanning volume, momentum, volatility, and trend categories. Includes interactive Plotly charts, plain-language explanations of indicators, and comparative insights to deepen understanding of their applications in trading strategies.\
-<ins>Status:</ins> ⏳
+<ins>Status:</ins> ✅
 
 ---
 **`Momentum-Stock-Screener-Week8/`** *→ [Project README.md](Momentum-Stock-Screener-Week8/README.md)*\
 <ins>Purpose:</ins> Build a Python-based momentum screener to identify Nasdaq-100 stocks exhibiting breakout signals. Includes automated data retrieval from Yahoo Finance, detection of recent uptrend breakouts via customizable technical rules, and validation of pattern effectiveness through backtesting and statistical analysis of post-signal returns.\
+<ins>Status:</ins> ✅
+
+---
+**`Options-Backtesting-Framework-Research-Week9/`** *→ [Project README.md](Options-Backtesting-Framework-Research-Week9/README.md)*\
+<ins>Purpose:</ins> Evaluate four major Python-based backtesting frameworks (Backtrader, QuantConnect LEAN, Zipline, VectorBT) for their suitability in options trading, assessed on ease of use, options support (data handling, execution fidelity), flexibility for custom strategies, and strength of community resources. Includes an explanatory report of the findings.\
 <ins>Status:</ins> ⏳
 
 ---
